@@ -1,15 +1,13 @@
-# NewsLetter Subscription
+# NewsLetter Subscription Server
 
-<h5>Two projects in one, both front-end and back-end to provide a back-end server that handles email subscriptions 
-where the front-end just shows the backend at work.</h5>
+<h5>Two projects in one, both front-end and back-end to provide a back-end server that handles email subscriptions </h5>
+<p>To se the project in action you can check out the Frontend project connected to this <b><a href="https://github.com/Reebeecka/LogInPage-FrontEnd"> here</a></b>.</p>
 
 <h3>Installation instructions:</h3>
 
 <p>This is a Node.js module available through the npm registry.</p>
 
 <p>Before installing, download and install <b>Node.js.</b></p>
-
-<p>Start the front-end project with liveServer, no installation required. </p>
 
 <p>Start the back-end project by navigating to the backend map in your terminal then run 
 <b>npm install</b> in the command line, this will install: </p>
@@ -33,9 +31,7 @@ in your terminal</p>
 
 <h3>Important information about the project: </h3>
 
-<p>The backend server when on your computer will run on localhost:5000 and to get to the admin view write 
-<b>localhost:5000/admin </b>
-in your browser. </p>
+<p>The backend server is run on Heroku you can find it  <b><a href="https://newsletterrebeckalarssons.herokuapp.com/admin">here</a></b></p>
 <p>To Login:</p>
 <p><b>username: Admin, password: Admin </b></p>
 <p>dont forget the <b>big A</b> in both Admins. </p>
