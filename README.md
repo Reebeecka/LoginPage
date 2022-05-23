@@ -23,7 +23,7 @@ where the front-end just shows the backend at work.</h5>
 </ul>
 
 <p>nodemon might need to be installed globally on your computer do that by typing</p>
-<p><b>npm install --global nodemon in the command line.<b></p>
+<p><b>npm install --global nodemon in the command line.</b></p>
 
 <p>Then to run the back-end project type npm start in the command line and the backend server will be started. 
 If everything works then you will se 
