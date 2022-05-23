@@ -33,12 +33,12 @@ in your terminal</p>
 
 <h3>Important information about the project: </h3>
 
-<p>The backend server when on your computer will be ran on localhost:5000 and to get to the admin view write 
+<p>The backend server when on your computer will run on localhost:5000 and to get to the admin view write 
 <b>localhost:5000/admin </b>
-in your browser. 
-You will have to login the 
-<b>username is Admin</b> and the 
-<b>password is Admin </b>
-dont forget the <b>big A</b> in both Admins. 
-On that site you will see all the users that have an account in the Database.</p>
+in your browser. </p>
+<p>You will have to login the </p>
+<p><b>username is Admin</b> and the 
+<b>password is Admin </b></p>
+<p>dont forget the <b>big A</b> in both Admins. </p>
+<p>On that site you will see all the users that have an account in the Database.</p>
 
