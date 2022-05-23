@@ -15,8 +15,8 @@ router.get('/login/:id', async (req, res) => {
 
 //För att logga in på sidan om man redan har en användare
   router.post('/login', async (req, res) => {
-    const products = await userModel.find();
-    const result = products.find( ({ username }) => username === req.body.username );
+    const users = await userModel.find();
+    const result = users.find( ({ username }) => username === req.body.username );
     if(result){
       if(result.password === req.body.password){
         res.json(result._id);
@@ -36,8 +36,8 @@ router.get('/login/:id', async (req, res) => {
     const user = await userModel.find();
     const result = user.find( ({ email }) => email === req.body.email );
     if(!result){
-      const product = new userModel(req.body);
-      await product.save();
+      const theUser = new userModel(req.body);
+      await theUser.save();
       res.status(200).json("Created")
     }
     else{
@@ -47,12 +47,12 @@ router.get('/login/:id', async (req, res) => {
 
   router.put('/change', async (req, res) => {
     const {_id, newsletter} = req.body;
-    const product = await userModel.findById({_id});
-    product.newsletter = newsletter;
+    const user = await userModel.findById({_id});
+    user.newsletter = newsletter;
 
   
-    await product.save();
-    res.json(product);
+    await user.save();
+    res.json(user);
   });
 
   

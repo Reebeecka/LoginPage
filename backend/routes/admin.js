@@ -65,7 +65,7 @@ res.send(form);
          res.send(logout + theUsers);
       }
       else{
-          res.send("nrj")
+          res.redirect("/admin");
       }
   })
   
