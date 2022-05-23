@@ -4,6 +4,10 @@ const userModel = require('../models/users.model');
 
 router.use(express.json());
 
+const cors = require('cors');
+
+router.use(cors());
+
 //För att logga in på sidan om man redan har en användare
   router.post('/login', async (req, res) => {
     const products = await userModel.find();

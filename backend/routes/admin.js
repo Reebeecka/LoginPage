@@ -4,6 +4,10 @@ const userModel = require('../models/users.model');
 
 router.use(express.json());
 
+const cors = require('cors');
+
+router.use(cors());
+
 let login = true;
 
 router.get('/', (req, res) => {
