@@ -12,7 +12,7 @@ mongoose.connect(`mongodb+srv://hej:hejhej@rebecka.i3dmu.mongodb.net/Newsletter?
     }
 });
 
-const port = 5000
+var port = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json());
