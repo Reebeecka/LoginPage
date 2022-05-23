@@ -6,14 +6,18 @@ Content-Type: application/json
     "password": "TestPassword"
 }
 
+###
+
+GET http://localhost:5000/api/login/628b42faeaed62de209d6dea
+
 ### 
 POST http://localhost:5000/api/create 
 Content-Type: application/json
 
 {
-    "username": "Christopher",
+    "username": "Anna",
     "password": "TestPassword",
-    "email": "hej@example.com",
+    "email": "Anna@example.com",
     "newsletter": false
 }
 
