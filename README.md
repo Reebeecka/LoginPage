@@ -12,9 +12,9 @@ where the front-end just shows the backend at work.</h5>
 <p>Start the front-end project with liveServer, no installation required. </p>
 
 <p>Start the back-end project by navigating to the backend map in your terminal then run 
-<b>npm install</b> in the command line</p>
+<b>npm install</b> in the command line, this will install: </p>
 
-<ul>and you will install:
+<ul>
 <li>"cors": "^2.8.5",</li>
 <li>"express": "^4.18.1",</li>
 <li>"mongoose": "^6.3.4",</li>
