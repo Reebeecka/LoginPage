@@ -1,7 +1,7 @@
 {
-  "name": "backend",
+  "name": "newletter",
   "version": "1.0.0",
-  "description": "Backend application for assignment in school",
+  "description": "Application for users to submit to newsletter",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.3.4",
     "nodemon": "^2.0.16"

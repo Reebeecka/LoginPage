@@ -222,10 +222,16 @@ function createUser() {
                 p.innerHTML = "Din användare är nu skapad. Gå tillbaka till startsidan och logga in";
                 postSection.appendChild(p);
             }
-            else {
+            else if (data === "Email already exists"){
                 postSection.innerHTML = "";
                 let p = document.createElement("p");
                 p.innerHTML = "Denna e-post finns redan registrerad, gå till startsidan och logga in eller använd en annan e-post adress";
+                postSection.appendChild(p);
+            }
+            else{
+                postSection.innerHTML = "";
+                let p = document.createElement("p");
+                p.innerHTML = "Detta användarnamn är upptaget, gå till startsidan och logga in eller använd en annan e-post adress";
                 postSection.appendChild(p);
             }
         })

@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var CryptoJS = require("crypto-js");
 const userModel = require('../models/users.model');
 
 router.use(express.json());
@@ -18,7 +19,8 @@ router.get('/login/:id', async (req, res) => {
     const users = await userModel.find();
     const result = users.find( ({ username }) => username === req.body.username );
     if(result){
-      if(result.password === req.body.password){
+      var originalPassword = CryptoJS.AES.decrypt(result.password, "theKey").toString(CryptoJS.enc.Utf8);
+      if(originalPassword === req.body.password){
         res.json(result._id);
       }
       else{
@@ -34,11 +36,18 @@ router.get('/login/:id', async (req, res) => {
 //Skapa ny användare
   router.post('/create', async (req, res) => {
     const user = await userModel.find();
-    const result = user.find( ({ email }) => email === req.body.email );
-    if(!result){
-      const theUser = new userModel(req.body);
+    const resultEmail = user.find( ({ email }) => email === req.body.email );
+    const resultUserName = user.find( ({ username }) => username === req.body.username);
+    if(!resultEmail){
+      if(!resultUserName){
+      var cryptedPassword = CryptoJS.AES.encrypt(req.body.password, "theKey").toString();
+      const theUser = new userModel({username:req.body.username, password:cryptedPassword, email:req.body.email, newsletter:req.body.newsletter});
       await theUser.save();
       res.status(200).json("Created")
+      }
+      else{
+        res.status(404).json("Username already exists")
+      }
     }
     else{
       res.status(404).json("Email already exists")

@@ -1,10 +1,10 @@
-
 var express = require('express');
 var mongoose = require('mongoose');
 var adminRouter = require('./routes/admin');
 var apiRouter = require('./routes/api');
+require('dotenv').config();
 
-mongoose.connect("mongodb://localhost/assignment", (err) => {
+mongoose.connect(`mongodb+srv://rebeckalarsson:${process.env.S3_BUCKET}@rebecka.i3dmu.mongodb.net/Newsletter?retryWrites=true&w=majority`, (err) => {
     if(err) {
         console.log(err);
     } else {
@@ -18,6 +18,7 @@ const app = express();
 app.use(express.json());
 app.use('/admin', adminRouter);
 app.use('/api', apiRouter);
+
 
 
 app.listen(port, () => {
