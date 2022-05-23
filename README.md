@@ -1,6 +1,18 @@
-Two projects in one, both front-end and back-end. 
+# NewsLetter Subscription
+
+---
+displayName: NewsLetter Subscription
+description: A simple subscription client
+labels: ['node.js', 'express', 'communication', 'backend' , 'frontend']
+---
+
+Two projects in one, both front-end and back-end to provide a back-end server that handles email subscriptions 
+where the front-end just shows the backend at work.
 
 Installation instructions:
+This is a Node.js module available through the npm registry.
+
+Before installing, download and install Node.js.
 
 Start the front-end project with liveServer, no installation required. 
 
