@@ -14,6 +14,7 @@
 
 <ul>
 <li>"cors": "^2.8.5",</li>
+<li>"crypto-js": "^4.1.1",</li>
 <li>"express": "^4.18.1",</li>
 <li>"mongoose": "^6.3.4",</li>
 <li>"nodemon": "^2.0.16"</li>
