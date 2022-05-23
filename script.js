@@ -2,7 +2,6 @@ var express = require('express');
 var mongoose = require('mongoose');
 var adminRouter = require('./routes/admin');
 var apiRouter = require('./routes/api');
-require('dotenv').config();
 
 mongoose.connect(`mongodb+srv://hej:hejhej@rebecka.i3dmu.mongodb.net/Newsletter?retryWrites=true&w=majority`, (err) => {
     if(err) {
