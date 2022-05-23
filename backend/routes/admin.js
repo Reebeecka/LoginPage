@@ -4,7 +4,7 @@ const userModel = require('../models/users.model');
 
 router.use(express.json());
 
-let login = false;
+let login = true;
 
 router.get('/', (req, res) => {
     let form = `<form action="admin/login" method="post">
@@ -40,12 +40,12 @@ res.send(form);
   router.get('/hej', async (req, res) => {
       if (login){
         const users = await userModel.find();
-        var theUsers = "<p>";
+        var theUsers = "<div>";
     
         for(var i = 0; i< users.length; i++){
-             theUsers += ' ' + users[i];  
+             theUsers += '<p>' + users[i] + "</p>";  
          }
-         theUsers += '</p>';
+         theUsers += '</div>';
     
          res.send(theUsers);
       }

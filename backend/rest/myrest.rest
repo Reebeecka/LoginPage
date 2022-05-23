@@ -1,28 +1,31 @@
-POST http://localhost:5000/api 
+POST http://localhost:5000/api/login 
 Content-Type: application/json
 
 {
-    "username": "Rebecka",
+    "username": "Felix",
+    "password": "TestPassword"
+}
+
+### 
+POST http://localhost:5000/api/create 
+Content-Type: application/json
+
+{
+    "username": "Felix",
     "password": "TestPassword",
-    "email": "hej@hej.com",
-    "newsletter": true
+    "email": "test@example.com",
+    "newsletter": false
 }
 
 
-
 ###
 
-GET http://localhost:5000/admin
-
-###
-
-PUT http://localhost:5000/products
+PUT http://localhost:5000/api/change
 Content-Type: application/json
 
 {
-    "_id": "6285f51bc70845da84b1329e",
-    "title": "Awesome Jacket",
-    "price": 1000
+    "_id": "628b67440e5d2ea4eac82dc9",
+    "newsletter": false
 }
 
 ###
