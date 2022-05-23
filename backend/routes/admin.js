@@ -3,30 +3,24 @@ var router = express.Router();
 const userModel = require('../models/users.model');
 
 router.use(express.json());
+router.use(express.urlencoded());
 
-const cors = require('cors');
-
-router.use(cors());
-
-let login = true;
+let login = false;
 
 router.get('/', (req, res) => {
+    login = false;
     let form = `<form action="admin/login" method="post">
-    <h2>Lägg till ny bok</h2>
+    <h2>Logga in</h2>
     <div>
-    Namn: 
-    <input type="text" name="bookName">
+    Användarnamn: 
+    <input type="text" name="name">
     </div>
     <div>
-    Författare: 
-    <input type="text" name="author">
+    Lösenord: 
+    <input type="password" name="password">
     </div>
     <div>
-    Sidor: 
-    <input type="text" name="pages">
-    </div>
-    <div>
-    <button type="submit">Spara</button>
+    <button type="submit">Logga in</button>
     </div>
 </form>`
 res.send(form);
@@ -35,23 +29,40 @@ res.send(form);
 
   router.post("/login", function (req, res) {
 
-    console.log(req.body);
-    res.send("hej");
-
+    if(req.body.name == "Admin" && req.body.password =="Admin"){
+        login = true;
+        res.redirect("/admin/logedin");
+    }
+    else{
+        res.send("Fel användarnamn eller lösenord");
+    }
         });
 
 
-  router.get('/hej', async (req, res) => {
+  router.get('/logedin', async (req, res) => {
       if (login){
         const users = await userModel.find();
+        let logout = '<a href="/admin">Logga ut</a>'
         var theUsers = "<div>";
     
         for(var i = 0; i< users.length; i++){
-             theUsers += '<p>' + users[i] + "</p>";  
+
+            let text = "";
+            if(!users[i].newsletter){
+                text = "inte "
+            }
+            else {text = ""};
+            
+             let user = `<div>
+             <h1>${users[i].username}</h1>
+             <h2>${users[i].email}</h2>
+             <h3>Prenumererar ` + text + `på brevet</h3>
+             `
+             theUsers += user;
          }
          theUsers += '</div>';
     
-         res.send(theUsers);
+         res.send(logout + theUsers);
       }
       else{
           res.send("nrj")
