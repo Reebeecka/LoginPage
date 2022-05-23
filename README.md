@@ -1,48 +1,44 @@
 # NewsLetter Subscription
 
----
-displayName: NewsLetter Subscription
-description: A simple subscription client
-labels: ['node.js', 'express', 'communication', 'backend' , 'frontend']
----
+<h5>Two projects in one, both front-end and back-end to provide a back-end server that handles email subscriptions 
+where the front-end just shows the backend at work.</h5>
 
-Two projects in one, both front-end and back-end to provide a back-end server that handles email subscriptions 
-where the front-end just shows the backend at work.
+<h3>Installation instructions:</h3>
 
-Installation instructions:
-This is a Node.js module available through the npm registry.
+<p>This is a Node.js module available through the npm registry.</p>
 
-Before installing, download and install Node.js.
+<p>Before installing, download and install <b>Node.js.</b></p>
 
-Start the front-end project with liveServer, no installation required. 
+<p>Start the front-end project with liveServer, no installation required. </p>
 
-Start the back-end project by running the command 
-npm install
+<p>Start the back-end project by running the command 
+<b>npm install</b></p>
 
-and you will install:
-"cors": "^2.8.5",
-"express": "^4.18.1",
-"mongoose": "^6.3.4",
-"nodemon": "^2.0.16"
+<ul>and you will install:
+<li>"cors": "^2.8.5",</li>
+<li>"express": "^4.18.1",</li>
+<li>"mongoose": "^6.3.4",</li>
+<li>"nodemon": "^2.0.16"</li>
 (these are all the latest versions on the time of creation)
+</ul>
 
-nodemon might need to be installed globally on your computer do that by typing
-npm install --global nodemon in the command line. 
+<p>nodemon might need to be installed globally on your computer do that by typing</p>
+<p><b>npm install --global nodemon in the command line.<b></p>
 
-Then to run the back-end project type npm start in the command line and the backend server will be started. 
+<p>Then to run the back-end project type npm start in the command line and the backend server will be started. 
 If everything works then you will se 
-"Application is running on port 5000" & "Database is connected" 
-in your terminal
+<b>"Application is running on port 5000" & "Database is connected" </b>
+in your terminal</p>
 
 
-Important information about the project: 
+<h3>Important information about the project: </h3>
 
-The backend server when on your computer will be ran on localhost:5000 and to get to the admin view write 
-localhost:5000/admin 
+<p>The backend server when on your computer will be ran on localhost:5000 and to get to the admin view write 
+<b>localhost:5000/admin </b>
 in your browser. 
 You will have to login the 
-username is Admin and the 
-password is Admin 
-dont forget the big A in both Admins. 
-On that site you will see all the users that have an account in the Database.
+<b>username is Admin</b> and the 
+<b>password is Admin </b>
+dont forget the <b>big A</b> in both Admins. 
+On that site you will see all the users that have an account in the Database.</p>
 
