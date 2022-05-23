@@ -4,7 +4,7 @@ var adminRouter = require('./routes/admin');
 var apiRouter = require('./routes/api');
 require('dotenv').config();
 
-mongoose.connect(`mongodb+srv://rebeckalarsson:Helios97@rebecka.i3dmu.mongodb.net/Newsletter?retryWrites=true&w=majority`, (err) => {
+mongoose.connect(`mongodb+srv://hej:hejhej@rebecka.i3dmu.mongodb.net/Newsletter?retryWrites=true&w=majority`, (err) => {
     if(err) {
         console.log(err);
     } else {
