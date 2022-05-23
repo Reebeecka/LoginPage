@@ -4,7 +4,7 @@ var adminRouter = require('./routes/admin');
 var apiRouter = require('./routes/api');
 require('dotenv').config();
 
-mongoose.connect(`mongodb+srv://rebeckalarsson:${process.env.S3_BUCKET}@rebecka.i3dmu.mongodb.net/Newsletter?retryWrites=true&w=majority`, (err) => {
+mongoose.connect(`mongodb+srv://${process.env.MONGODBNAME}:${process.env.PASSWORD}@rebecka.i3dmu.mongodb.net/Newsletter?retryWrites=true&w=majority`, (err) => {
     if(err) {
         console.log(err);
     } else {
