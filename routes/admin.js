@@ -81,7 +81,7 @@ router.get('/emailList', async (req, res) => {
 
             let user;
             if (!users[i].newsletter) {user=""}
-            else { user =  `<li>${users[i].email}</li>`};
+            else { user =  `<li>${users[i].email},</li>`};
 
             theUsers += user;
         }
